@@ -1,34 +1,32 @@
 # Kafka Project with Zookeeper, Brokers, Schema Registry, and Control Center
 
-1. Project Overview
-This project demonstrates a simple Kafka setup with the following components:
+1. Project Overview 
+This project demonstrates a simple Kafka setup with the following components :
+   Zookeeper: Coordinates and manages Kafka brokers.
+   Kafka Brokers: Handles message distribution and ensures fault tolerance.
+   Schema Registry: Manages Avro schemas for serialized message data.
+   Kafka Control Center: Monitors Kafka topics, messages, and metrics.
+   Spring Boot Application: Implements Kafka producer and consumer functionality using Avro serialization/deserialization.
 
-Zookeeper: Coordinates and manages Kafka brokers.
-Kafka Brokers: Handles message distribution and ensures fault tolerance.
-Schema Registry: Manages Avro schemas for serialized message data.
-Kafka Control Center: Monitors Kafka topics, messages, and metrics.
-Spring Boot Application: Implements Kafka producer and consumer functionality using Avro serialization/deserialization.
+2. Prerequisites 
+Ensure the following tools are installed on your system :
+   Docker: To run Kafka components in containers.
+   Java 11 or higher: For the Spring Boot application.
+   Postman or curl: To send HTTP requests for testing.
+   Docker Desktop(Optional): To verify the status of containers
 
-2. Prerequisites
-Ensure the following tools are installed on your system:
-
-Docker: To run Kafka components in containers.
-Java 11 or higher: For the Spring Boot application.
-Postman or curl: To send HTTP requests for testing.
-Docker Desktop(Optional): To verify the status of containers
-
-3. Starting Kafka Components with Docker Compose
-   Start all the the components of kafka using below command :
-   docker compose up -d
-   Stop all the the components of kafka using below command :
-   docker compose down
+3. Starting Kafka Components with Docker Compose 
+      Start all the the components of kafka using below command :
+         docker compose up -d
+      Stop all the the components of kafka using below command :
+         docker compose down
 
 4. Configuring and Running the Spring Application
    Configure application.yml
     Update the application.yml file with Kafka and Schema Registry details
-   Run the Spring Application
-      Build and run the application:
-        mvn spring-boot:run
+      Run the Spring Application
+         Build and run the application:
+            mvn spring-boot:run
 
 5. Sending and Consuming Messages
     Use Postman or curl to send a message to the producer endpoint:
@@ -44,7 +42,7 @@ Docker Desktop(Optional): To verify the status of containers
             "email" : "cath@gmail.com"
         }
    
-       Consumer Logs
+     Consumer Logs
           The consumer automatically consumes the message and logs it to the console:
             Received message: Employee{id=1, name='Alice', department='Engineering'}
 
