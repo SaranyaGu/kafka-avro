@@ -1,0 +1,29 @@
+{
+  "namespace": "com.example.spring_kafka_avroschema.dto",
+  "type": "record",
+  "name": "Employee",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "firstName",
+      "type": "string"
+    },
+    {
+      "name": "lastName",
+      "type": "string"
+    },
+    {
+      "name": "dob",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "default": ""
+    }
+  ]
+}
